@@ -99,3 +99,5 @@ print(F)
 # for i in range(1,N+1):
 #     F=F*i
 # print(F)
+
+# Два разных решения
