@@ -86,6 +86,8 @@
 # num = int(input("Введите число: "))
 # multiple(num)
 
+
+#  Задача для числа Фибонначи
 N = int(input('Input number N: '))
 F = 1
 num = 1
