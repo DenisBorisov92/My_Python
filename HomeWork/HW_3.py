@@ -19,3 +19,17 @@ import random
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
+size = int(input('Enter size of array: '))
+list = []
+new=[]
+for i in range(size):
+    list.append(random.randint(1, 10))
+print(list)
+
+for i in range(int(len(list)/2+1)):
+    if i== 0:
+        new.append(list[0]*list[-1])
+    else:
+        new.append(list[-i-1]*list[i])
+print(new)        
+    
