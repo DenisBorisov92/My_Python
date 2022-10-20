@@ -14,22 +14,61 @@ import random
 # print(sum)
 
 # ---------------------------------------------
-#  №2  Напишите программу, которая найдёт произведение пар чисел списка. 
+#  №2  Напишите программу, которая найдёт произведение пар чисел списка.
 #       Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-size = int(input('Enter size of array: '))
-list = []
-new=[]
-for i in range(size):
-    list.append(random.randint(1, 10))
-print(list)
+# size = int(input('Enter size of array: '))
+# list = []
+# new=[]
+# for i in range(size):
+#     list.append(random.randint(1, 10))
+# print(list)
 
-for i in range(int(len(list)/2+1)):
-    if i== 0:
-        new.append(list[0]*list[-1])
-    else:
-        new.append(list[-i-1]*list[i])
-print(new)        
-    
+# for i in range(int(len(list)/2+1)):
+#     if i== 0:
+#         new.append(list[0]*list[-1])
+#     else:
+#         new.append(list[-i-1]*list[i])
+# print(new)
+# ------------------------------------------------------
+#    №3  Задайте список из вещественных чисел. Напишите программу,
+# которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+# [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+import random
+
+# Создает список вещественных чисел в опр. диапазоне, с 2 знаками после запятой, в количестве 6 значений
+list = [round(random.uniform(1, 15), 2) for x in range(7)]
+newlist = []
+print(f'Список вещественных чисел {list}')
+
+for i in range(len(list)):
+    if list[i] % 1 != 0:
+        n = list[i] % 1
+        newlist.append(round(n, 2))
+print(newlist)
+max = max(newlist)
+min = min(newlist)
+razn = max - min
+print(
+    f' Разница между максимальным и минимальным знач. дробной части = {razn:.2f}')
+# ---------------------------------------------------
+#    №4   Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
+
+N = int(input('Введите целое десятичное число: '))
+print(N)
+n = ''
+res = ''
+while N > 0:
+    n += str(N % 2)  # берем отсюда остаток от деления
+    N = N//2          # уменьшаем N , берем только целую часть от деления
+print(n)
+
+for i in range(len(n)-1, -1, -1):  # Цикл для разворота строки
+    res += n[i]
+print(res)
