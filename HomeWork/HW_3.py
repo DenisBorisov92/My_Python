@@ -26,11 +26,11 @@ import random
 #     list.append(random.randint(1, 10))
 # print(list)
 
-# for i in range(int(len(list)/2+1)):
-#     if i== 0:
-#         new.append(list[0]*list[-1])
-#     else:
-#         new.append(list[-i-1]*list[i])
+# for i in range(int(len(list)/2+len(list)%2)):
+#     # if i== 0:                                  #можно решить без первого условия
+#     #     new.append(list[0]*list[-1])
+#     # else:
+#     new.append(list[-i-1]*list[i])
 # print(new)
 # ------------------------------------------------------
 #    №3  Задайте список из вещественных чисел. Напишите программу,
