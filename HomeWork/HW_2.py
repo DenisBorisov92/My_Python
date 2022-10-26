@@ -50,17 +50,20 @@ arr= list(range(-N,N+1))
 print(arr)
 
 f = open('file.txt', 'r')
-print(arr[int(f.readlines())]), 
+s=0
+for line in f:
+    s+=int(line)
+    print(s)
 f.close()
 #В данной задаче не получается обратится к каждой строчке файла к индексу, чтоб взять от туда число
 
 # №5  Реализуйте алгоритм перемешивания списка.
-import random
-size = int(input('Enter size of array: '))
-list = []
-for i in range(size):
-    list.append(random.randint(-10, 20))
-print(list)
+# import random
+# size = int(input('Enter size of array: '))
+# list = []
+# for i in range(size):
+#     list.append(random.randint(-10, 20))
+# print(list)
 
-random.shuffle(list)
-print(list)
+# random.shuffle(list)
+# print(list)
