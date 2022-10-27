@@ -58,21 +58,21 @@ data = list(map(int,'1 2 34'.split()))
 for e in data:
     print(e*10)
 # --------------------------------
-##       Функция FILTER()
+##          Функция FILTER()
 data = [x for x in range(10)]
 
 res = list(filter(lambda x: not x%2, data))  # the same x%2 == 0 
 print(res)
 
 # ------------------------------
-## Функция ZIP()
+##             Функция ZIP()
 user = ['user1', 'user2', 'user3', 'user4']  # Есть набор данных юзеров
 ids = [4,5,7,10]  # есть набор индексов
 salary = [111, 222, 44]
 
 data= list((user, ids, salary)) # выполняем ф-ию zip(), ложем результат в data
 print(data)
-## ФУНКЦИЯ ENUMERATE()
+##              ФУНКЦИЯ ENUMERATE()
 #  Позволяет передать на вход набор данных, а на выход получаете кортежи с пронумерованными элементами( только 1 набор данных)
 data= list(enumerate(user))
 print(data)
