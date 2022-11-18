@@ -20,24 +20,24 @@ print(list)
 
 with open("RLE_text1.txt", 'w', encoding='utf_8') as file:
     a = file.write('AAAAAAFDDCCCCCCCAEEEEEEEEEEEEEEEEE')
-
  
 list = []
 list2 = []
+
 count = 1
 
-for i in len(a):
+for i in range((a)):
     list.append(i)
-i = 0
+print(list)
+i=0
 while i < (len(list)-1):
     if list[i] == list[i+1]:
         count += 1
     else:
         list2.append(str(count) + str(list[i]))
-        count = 1
+        
     i += 1
-else: list2.append(str(count) + str(list[i]))
-
+else: list2.append(str(count)+str(list[i]))
 b = ''.join(list2)
 
 print(b)
